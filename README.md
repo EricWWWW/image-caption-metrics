@@ -8,7 +8,7 @@ Features below:
 
 ## Requirements
 - java 1.8+
-- python 3 (Python2 has not been tried)
+- python 3 (Python2 has not been tested)
     - gensim
 - Stanford CoreNLP 3.6.0[(download)](http://nlp.stanford.edu/software/stanford-corenlp-full-2015-12-09.zip)
     - add stanford-corenlp-3.6.0.jar to `pycocoevalcap/spice/lib/`
