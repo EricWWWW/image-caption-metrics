@@ -25,3 +25,35 @@ def eval(gts,res):
     s6, _ = scorer.compute_score(gts, res)
 
     return {'bleu':s1,'cider':s2,'meteor':s3,'rouge':s4,'spice':s5,'wmd':s6}
+
+def get_bleu(gts,res):
+    scorer = Bleu(n=4)
+    s, _ = scorer.compute_score(gts, res)
+    return s
+
+def get_meteor(gts, res):
+    scorer = Meteor()
+    s, _ = scorer.compute_score(gts, res)
+    return s
+
+def get_cider(gts, res):
+    scorer = Cider()
+    s, _ = scorer.compute_score(gts, res)
+    return s
+
+def get_rouge(gts, res):
+    scorer = Rouge()
+    s, _ = scorer.compute_score(gts, res)
+    return s
+
+
+def get_spice(gts, res):
+    scorer = Spice()
+    s, _ = scorer.compute_score(gts, res)
+    return s
+
+
+def get_wmd(gts, res):
+    scorer = WMD()
+    s, _ = scorer.compute_score(gts, res)
+    return s
