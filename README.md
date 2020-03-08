@@ -21,7 +21,21 @@ Features below:
 See in `demo.py`
 - Note that the input format must be the same as the file in `examples/gts.json` and `examples/res.json`
 - It seems can't run in windows(error about java), run it on Linux
+```
+import pycocoevalcap.eval as E
 
+with open('examples/gts.json', 'r') as f: 
+    gts = json.load(f)
+with open('examples/res.json', 'r') as f:
+    res = json.load(f)
+    
+ans = E.eval(gts,tes)
+print(ans)
+bleu = E.get_bleu(gts,res)
+print(bleu)
+cider = E.get_cider(gts,res)
+print(cider)
+```
 ## References
 - WMD metric from [https://github.com/mtanti/coco-caption](https://github.com/mtanti/coco-caption)
 - main code from [https://github.com/wangleihitcs/CaptionMetrics](https://github.com/wangleihitcs/CaptionMetrics)
